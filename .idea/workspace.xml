@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47ba0f5c-d8a9-49da-aab7-87d8dc4844d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +150,7 @@
       <workItem from="1593654770939" duration="15388000" />
       <workItem from="1594361834600" duration="4336000" />
       <workItem from="1594689667324" duration="1608000" />
-      <workItem from="1594965103696" duration="2827000" />
+      <workItem from="1594965103696" duration="3043000" />
     </task>
     <task id="LOCAL-00001" summary="首次提交">
       <created>1594969049448</created>
@@ -159,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594969049448</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="首次提交">
+      <created>1594969257928</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1594969257928</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,10 +193,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="689" y="307" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591772592369" />
-    <state x="418" y="115" key="CommitChangelistDialog2" timestamp="1594969048747">
+    <state x="418" y="115" key="CommitChangelistDialog2" timestamp="1594969257474">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="418" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1594969048747" />
+    <state x="418" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1594969257474" />
     <state width="456" height="466" key="DebuggerActiveHint" timestamp="1593656574038">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -258,10 +265,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="490" y="177" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591694929545" />
-    <state x="440" y="96" key="SettingsEditor" timestamp="1594969222543">
+    <state x="440" y="96" key="SettingsEditor" timestamp="1594969438291">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="96" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1594969222543" />
+    <state x="440" y="96" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1594969438291" />
     <state x="570" y="241" width="779" height="558" key="find.popup" timestamp="1591867749468">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
