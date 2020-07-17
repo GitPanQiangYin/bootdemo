@@ -103,4 +103,7 @@ public class BootdemoApplicationTests {
 
     }
 
+    void test(){
+        System.out.println("test");
+    }
 }
