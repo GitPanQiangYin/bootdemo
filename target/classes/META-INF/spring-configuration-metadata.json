@@ -1,0 +1,27 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.boot.bootdemo.author",
+      "name": "author",
+      "type": "com.boot.bootdemo.author"
+    },
+    {
+      "sourceType": "com.boot.bootdemo.config.EmailConfig",
+      "name": "spring.mail",
+      "type": "com.boot.bootdemo.config.EmailConfig"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.boot.bootdemo.author",
+      "name": "author.date",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.boot.bootdemo.author",
+      "name": "author.name",
+      "type": "java.lang.String"
+    }
+  ]
+}
