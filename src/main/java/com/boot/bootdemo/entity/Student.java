@@ -5,4 +5,5 @@ package com.boot.bootdemo.entity;
  * @date 2020/7/20 16:52
  */
 public class Student {
+
 }
