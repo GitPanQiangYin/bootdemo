@@ -1,6 +1,8 @@
 package com.boot.bootdemo.entity;
 
-public class Paper {
+import java.io.Serializable;
+
+public class Paper implements Serializable {
     private long paperId;
     private String paperName;
     private int paperNum;
