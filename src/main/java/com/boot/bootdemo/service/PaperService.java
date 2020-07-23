@@ -15,5 +15,13 @@ public interface PaperService {
 
     Paper queryById(long id);
 
-    List<Paper> queryAllPaper();
+    List<Paper> queryAllPaper(Integer pageIndex,Integer pageSize);
+    /*
+    * @description：查询全部
+    * @param ：
+    * @return {{@link java.util.List<com.boot.bootdemo.entity.Paper>}}
+    * @author Administrator
+    * @date 2020/7/22 15:45
+    */
+    List<Paper> selectAll();
 }

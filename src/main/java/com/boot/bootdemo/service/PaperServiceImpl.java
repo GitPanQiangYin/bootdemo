@@ -4,7 +4,9 @@ package com.boot.bootdemo.service;
 import com.boot.bootdemo.dao.PaperDao;
 import com.boot.bootdemo.entity.Paper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -34,8 +36,15 @@ public class PaperServiceImpl implements PaperService {
     }
 
     @Override
-    public List<Paper> queryAllPaper() {
-        return paperDao.queryAllPaper();
+    @Transactional
+    @Cacheable(value = "AllPaper",key = "#pageIndex+#pageSize")
+    public List<Paper> queryAllPaper(Integer pageIndex,Integer pageSize) {
+        return paperDao.queryAllPaper(pageIndex,pageSize);
+    }
+
+    @Override
+    public List<Paper> selectAll() {
+        return paperDao.selectAll();
     }
 
 }

@@ -3,11 +3,13 @@ package com.boot.bootdemo.controller;
 
 import com.boot.bootdemo.entity.Paper;
 import com.boot.bootdemo.service.PaperService;
+import com.boot.bootdemo.util.JsonUtils;
 import com.boot.bootdemo.util.RedisUtil1;
 import com.boot.bootdemo.util.RedisUtils;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,7 +18,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 @Controller
 @RequestMapping("/paper")
@@ -29,35 +33,37 @@ public class PaperController {
         RedisUtil1 redisUtil;
         @Autowired
         RedisUtils redisUtils;
+        @Autowired
+        StringRedisTemplate stringRedisTemplate;
 
     @RequestMapping("/allPaper")
     public String list(Model model) {
 
-        long page1 = 1;
-        long pageSize = 3;
-        String key = "user_key_";
-        List<Paper> list = null;
+        long pageIndex = 1;
+        long pageSize = 2;
+        String key = "allPaper";
+        List<Paper> list = new ArrayList<>();
         if (redisTemplate.hasKey(key)) {
-            Object o  = redisUtils.get("sortId");
-            //获得最大分值
-            Double maxScore =  redisUtil.sMaxScore("sortId");
-            // 分页取数据
-            List list1 = redisUtil.sRangeByScore("sortId",0.0,maxScore,page1,pageSize);
-            list =redisUtil.hMultiGet(key,list1);
+            list = paperService.selectAll();
+
+                //获得最大分值
+                Double maxScore =  redisUtil.sMaxScore("sortId");
+                List list1 = redisUtil.sRangeByScore("sortId",0.0,maxScore,pageIndex,pageSize);
+                list =redisUtil.hMultiGet(key,list);
+
 
         }else {
-            list = paperService.queryAllPaper();
-            for (Paper paper : list) {
-                //初始化user_key的索引
-                double i = list.indexOf(paper);
-                redisTemplate.opsForZSet().add("sortId", key + paper.getPaperId(), i);
-                redisTemplate.opsForHash().put(key, key + paper.getPaperId(), paper);
-            }
-
+            list = paperService.selectAll();
+        for (Paper paper : list) {
+            //初始化user_key的索引，利用sortset来保存hk每个对象的hk
+            redisTemplate.opsForZSet().add("sortId", key + paper.getPaperId(), paper.getPaperId());
+            //利用hash来保存user，这里的hk要和sortset保存的value一致，后续分页的时候有用
+            redisTemplate.opsForHash().put(key, key + paper.getPaperId(), paper);
+        }
         }
 
 
-       // List<Paper> list = paperService.queryAllPaper();
+       //list = paperService.queryAllPaper((pageIndex-1)*pageSize,pageSize*pageIndex);
         model.addAttribute("list", list);
         return "allPaper";
 

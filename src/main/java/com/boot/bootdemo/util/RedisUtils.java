@@ -21,6 +21,7 @@ public class RedisUtils {
     @Autowired
     private RedisTemplate redisTemplate;
 
+
     /**
      * 写入缓存
      *
@@ -211,4 +212,11 @@ public class RedisUtils {
         ZSetOperations<String, Object> zset = redisTemplate.opsForZSet();
         return zset.rangeByScore(key, scoure, scoure1);
     }
+
+   /* public long hset(String hkey, String key, String value) {
+        Jedis jedis = jedisPool.getResource();
+        Long result = jedis.hset(hkey, key, value);
+        jedis.close();
+        return result;
+    }*/
 }

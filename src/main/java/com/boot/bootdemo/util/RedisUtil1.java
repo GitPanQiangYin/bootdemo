@@ -28,7 +28,6 @@ public class RedisUtil1 {
     public Double sMaxScore(String key){
         //获得最后一个对应的member，用于获得最大的分数
         Set<String> sortId = redisTemplate.opsForZSet().reverseRange(key, 0, 0);
-
         String hkey = sortId.iterator().next();
         //根据member获得最大分值
         Double maxScore = redisTemplate.opsForZSet().score(key, hkey);
