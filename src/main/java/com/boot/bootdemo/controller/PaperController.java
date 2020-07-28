@@ -4,12 +4,9 @@ package com.boot.bootdemo.controller;
 import com.boot.bootdemo.entity.Paper;
 import com.boot.bootdemo.service.PaperService;
 import com.boot.bootdemo.util.JsonUtils;
-import com.boot.bootdemo.util.RedisUtil1;
-import com.boot.bootdemo.util.RedisUtils;
+import com.boot.bootdemo.util.StringUtil;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,23 +24,26 @@ import java.util.Set;
 public class PaperController {
         @Autowired
         private PaperService paperService;
-        @Autowired
-        RedisTemplate redisTemplate;
-        @Autowired
+
+/*        @Autowired
         RedisUtil1 redisUtil;
         @Autowired
-        RedisUtils redisUtils;
-        @Autowired
-        StringRedisTemplate stringRedisTemplate;
+        RedisUtils redisUtils;*/
 
     @RequestMapping("/allPaper")
-    public String list(Model model) {
-
-        long pageIndex = 1;
-        long pageSize = 2;
+    public String list(Model model,Paper paper) {
+        Integer pageIndex = 1;
+        Integer pageSize = 2;
         String key = "allPaper";
         List<Paper> list = new ArrayList<>();
-        if (redisTemplate.hasKey(key)) {
+        String keyWord = paper.getKeyWord();
+        if (StringUtil.isEmpty(keyWord)){
+            list = paperService.queryAllPaper(pageIndex,pageSize);
+            paperService.updateES();
+        }else{
+            list = paperService.findPaperByEs(paper);
+        }
+       /* if (redisTemplate.hasKey(key)) {
             list = paperService.selectAll();
 
                 //获得最大分值
@@ -56,11 +56,11 @@ public class PaperController {
             list = paperService.selectAll();
         for (Paper paper : list) {
             //初始化user_key的索引，利用sortset来保存hk每个对象的hk
-            redisTemplate.opsForZSet().add("sortId", key + paper.getPaperId(), paper.getPaperId());
+            redisTemplate.opsForZSet().add("sortId", key + paper.getid(), paper.getid());
             //利用hash来保存user，这里的hk要和sortset保存的value一致，后续分页的时候有用
-            redisTemplate.opsForHash().put(key, key + paper.getPaperId(), paper);
+            redisTemplate.opsForHash().put(key, key + paper.getid(), paper);
         }
-        }
+        }*/
 
 
        //list = paperService.queryAllPaper((pageIndex-1)*pageSize,pageSize*pageIndex);
@@ -80,14 +80,14 @@ public class PaperController {
         return "redirect:/paper/allPaper";
     }
 
-    @RequestMapping("/del/{paperId}")
-    public String deletePaper(@PathVariable("paperId") Long id) {
+    @RequestMapping("/del/{id}")
+    public String deletePaper(@PathVariable("id") String id) {
         paperService.deletePaperById(id);
         return "redirect:/paper/allPaper";
     }
 
     @RequestMapping("toUpdatePaper")
-    public String toUpdatePaper(Model model, Long id) {
+    public String toUpdatePaper(Model model, String id) {
         model.addAttribute("paper", paperService.queryById(id));
         return "updatePaper";
     }
@@ -95,7 +95,7 @@ public class PaperController {
     @RequestMapping("/updatePaper")
     public String updatePaper(Model model, Paper paper) {
         paperService.updatePaper(paper);
-        paper = paperService.queryById(paper.getPaperId());
+        paper = paperService.queryById(paper.getId());
         model.addAttribute("paper", paper);
         return "redirect:/paper/allPaper";
     }

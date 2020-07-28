@@ -26,6 +26,8 @@ public class RbacServiceImpl implements RbacService {
             urls.add("/paper/allPaper");
             urls.add("/paper/toAddPaper");
             urls.add("/paper/addPaper");
+            urls.add("/paper/updatePaper");
+            urls.add("/paper/toUpdatePaper");
             urls.add("/api/insert");
             urls.add("/api/update");
             urls.add("/api/delete");

@@ -36,7 +36,8 @@
     </div>
 
     <form action="" name="userForm">
-        <input type="hidden" name="paperId" value="${paper.paperId}"/>
+        <input type="hidden" name="id" value="${paper.id}"/>
+        论文编号：<input type="text" name="code" value="${paper.code}"/>
         论文名称：<input type="text" name="paperName" value="${paper.paperName}"/>
         论文数量：<input type="text" name="paperNum" value="${paper.paperNum}"/>
         论文详情：<input type="text" name="paperDetail" value="${paper.paperDetail }"/>

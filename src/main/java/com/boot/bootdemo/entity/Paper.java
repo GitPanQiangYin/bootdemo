@@ -1,43 +1,25 @@
 package com.boot.bootdemo.entity;
 
+import lombok.Data;
+import org.springframework.data.elasticsearch.annotations.Document;
+import org.springframework.data.elasticsearch.annotations.Field;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.io.Serializable;
 
+@Data
+@Document(indexName = "paper")
 public class Paper implements Serializable {
-    private long paperId;
+    @Id
+    @Field(store = true)
+    private String id;
+    private String code;
     private String paperName;
     private int paperNum;
     private String paperDetail;
+    private String keyWord;
 
-    public long getPaperId() {
-        return paperId;
-    }
 
-    public void setPaperId(long paperId) {
-        this.paperId = paperId;
-    }
-
-    public String getPaperName() {
-        return paperName;
-    }
-
-    public void setPaperName(String paperName) {
-        this.paperName = paperName;
-    }
-
-    public int getPaperNum() {
-        return paperNum;
-    }
-
-    public void setPaperNum(int paperNum) {
-        this.paperNum = paperNum;
-    }
-
-    public String getPaperDetail() {
-        return paperDetail;
-    }
-
-    public void setPaperDetail(String paperDetail) {
-        this.paperDetail = paperDetail;
-    }
 
 }

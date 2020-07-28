@@ -38,6 +38,13 @@
             </div>
         </div>
     </div>
+    <form action="/paper/allPaper" method="post">
+        <div>
+            查询条件:<input type="text" id="keyWord" name="keyWord">
+            <input type="submit" value="查询">
+        </div>
+    </form>
+
     <div class="row">
         <div class="col-md-4 column">
             <a class="btn btn-primary" href="/paper/toAddPaper">新增</a>
@@ -58,13 +65,13 @@
                 <tbody>
                 <c:forEach var="paper" items="${requestScope.get('list')}" varStatus="status">
                     <tr>
-                        <td>${paper.paperId}</td>
+                        <td>${paper.code}</td>
                         <td>${paper.paperName}</td>
                         <td>${paper.paperNum}</td>
                         <td>${paper.paperDetail}</td>
                         <td>
-                            <a href="${path}/paper/toUpdatePaper?id=${paper.paperId}">更改</a> |
-                            <a href="<%=appPath%>/paper/del/${paper.paperId}">删除</a>
+                            <a href="${path}/paper/toUpdatePaper?id=${paper.id}">更改</a> |
+                            <a href="<%=appPath%>/paper/del/${paper.id}">删除</a>
                         </td>
                     </tr>
                 </c:forEach>

@@ -3,35 +3,54 @@ package com.boot.bootdemo;
 
         import ch.qos.logback.core.util.FileUtil;
         import com.boot.bootdemo.entity.User;
-        import com.boot.bootdemo.service.RedisTemplateService;
+        import com.boot.bootdemo.util.UserRepository;
+        import io.swagger.models.auth.In;
         import org.junit.Test;
         import org.junit.runner.RunWith;
         import org.springframework.beans.factory.annotation.Autowired;
+        import org.springframework.boot.SpringApplication;
         import org.springframework.boot.test.context.SpringBootTest;
         import org.springframework.cache.annotation.Cacheable;
+        import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
+        import org.springframework.data.elasticsearch.core.query.IndexQuery;
+        import org.springframework.data.elasticsearch.core.query.IndexQueryBuilder;
+        import org.springframework.data.elasticsearch.core.query.StringQuery;
         import org.springframework.mail.MailSender;
         import org.springframework.mail.SimpleMailMessage;
         import org.springframework.test.context.junit4.SpringRunner;
 
         import java.io.*;
+        import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @Cacheable
 public class BootdemoApplicationTests {
 
+    public static void main(String[] args) {
+        /**
+         * Springboot整合Elasticsearch 在项目启动前设置一下的属性，防止报错
+         * 解决netty冲突后初始化client时还会抛出异常
+         * java.lang.IllegalStateException: availableProcessors is already set to [4], rejecting [4]
+         */
+        System.setProperty("es.set.netty.runtime.available.processors", "false");
+        SpringApplication.run(BootdemoApplicationTests.class, args);
+    }
+
     @Test
     public void contextLoads() {
 
     }
-
+    @Autowired
+    UserRepository userRepository;
     @Autowired
     private MailSender javaMailSender;
 
-    @Autowired
-    RedisTemplateService redisTemplateService ;
 
-    @Test
+    @Autowired
+    ElasticsearchTemplate elasticsearchTemplate;
+
+/*    @Test
     public void redisTest(){
 
         User user = new User();
@@ -42,7 +61,7 @@ public class BootdemoApplicationTests {
 
         User us = redisTemplateService.get("key1",User.class);
         System.out.println(us.getUsername()+":  "+us.getPassword());
-    }
+    }*/
 
 
 
@@ -125,7 +144,63 @@ public class BootdemoApplicationTests {
 
     }
 
-    void test(){
-        System.out.println("test");
+        @Test
+       public void test(){
+        User user = new User();
+        user.setId(1);
+        user.setUsername("admin");
+        user.setPassword("admin");
+        user.setAge(18);
+        IndexQuery indexQuery = new IndexQueryBuilder()
+                .withId(String.valueOf(user.getId()))
+                .withObject(user)
+                .build();
+        String documentId = elasticsearchTemplate.index(indexQuery);
+        System.out.println(documentId);
     }
+
+    // 测试elasticsearchTemplate搜索
+  @Test
+  public void search() throws IOException {
+
+      String json = "{\n" +
+                   "        \"match\" : {\n" +
+                   "            \"username\" : \"admin\"\n" +
+                   "        }\n" +
+                   "    }";
+            StringQuery query = new StringQuery(json);
+             query.addIndices("user");
+             query.addTypes("test");
+
+             List<User> articles = elasticsearchTemplate.queryForList(query, User.class);
+             if(articles.size() > 0) {
+                     for (User a : articles){
+                             System.out.println(a.toString());
+                         }
+                 }
+         }
+     //测试UserRepository类的保存
+    @Test
+    public void test01(){
+        User user = new User();
+        user.setId(3);
+        user.setUsername("pqy1");
+        user.setPassword("123456");
+        user.setAge(18);
+        userRepository.save(user);
+    }
+
+    @Test
+    public void forindByAuthor1(){
+
+
+       /* userRepository.deleteAll();
+       List<User> userList = userRepository.findByUsername("pqy");
+        if (userList.size()>0){
+            for (User user : userList){
+                System.out.println(user.toString());
+            }
+        }*/
+    }
+
 }

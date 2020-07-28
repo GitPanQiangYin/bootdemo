@@ -12,14 +12,14 @@ import java.util.List;
 public interface PaperDao {
     int addPaper(Paper paper);
 
-    int deletePaperById(long id);
+    int deletePaperById(String id);
 
     int updatePaper(Paper paper);
 
-    Paper queryById(long id);
+    Paper queryById(String id);
 
     List<Paper> queryAllPaper(@Param("pageIndex") Integer pageIndex, @Param("pageSize")Integer pageSize);
 
-
     List<Paper> selectAll();
+
 }

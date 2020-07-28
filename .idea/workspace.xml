@@ -1,21 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="47ba0f5c-d8a9-49da-aab7-87d8dc4844d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/boot/bootdemo/util/JsonUtils.java" afterDir="false" />
+    <list default="true" id="47ba0f5c-d8a9-49da-aab7-87d8dc4844d9" name="Default Changelist" comment="研究Redis缓存 未成功">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/boot/bootdemo/dao/PaperRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/boot/bootdemo/service/base/BaseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/boot/bootdemo/service/base/BaseServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/boot/bootdemo/util/StringUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/boot/bootdemo/util/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/boot/bootdemo/util/UuidUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootdemo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bootdemo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/boot/bootdemo/BootdemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/boot/bootdemo/BootdemoApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/boot/bootdemo/controller/PaperController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/boot/bootdemo/controller/PaperController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/boot/bootdemo/dao/PaperDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/boot/bootdemo/dao/PaperDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/boot/bootdemo/entity/Paper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/boot/bootdemo/entity/Paper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/boot/bootdemo/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/boot/bootdemo/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/boot/bootdemo/service/PaperService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/boot/bootdemo/service/PaperService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/boot/bootdemo/service/PaperServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/boot/bootdemo/service/PaperServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/boot/bootdemo/service/RbacServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/boot/bootdemo/service/RbacServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/boot/bootdemo/service/RedisTemplateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/boot/bootdemo/service/RedisTemplateService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/boot/bootdemo/util/RedisUtil1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/boot/bootdemo/util/RedisUtil1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/boot/bootdemo/util/RedisUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/boot/bootdemo/util/RedisUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/PaperMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/PaperMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/addPaper.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/addPaper.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/allPaper.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/allPaper.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/updatePaper.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/updatePaper.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/boot/bootdemo/BootdemoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/boot/bootdemo/BootdemoApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/bootdemo.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/boot/bootdemo/BootdemoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/boot/bootdemo/BootdemoApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/boot/bootdemo/dao/PaperDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/boot/bootdemo/dao/PaperDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/boot/bootdemo/entity/Paper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/boot/bootdemo/entity/Paper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/boot/bootdemo/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/boot/bootdemo/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/boot/bootdemo/service/PaperService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/boot/bootdemo/service/PaperService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/boot/bootdemo/service/PaperServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/boot/bootdemo/service/PaperServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/boot/bootdemo/service/RbacServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/boot/bootdemo/service/RbacServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/PaperMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/PaperMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.boot.bootdemo.BootdemoApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.boot.bootdemo.BootdemoApplicationTests.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/boot/bootdemo/BootdemoApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/boot/bootdemo/BootdemoApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,21 +109,9 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15332031" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\workspace\bootdemo\src\main\java\com\boot\bootdemo" />
-      <recent name="E:\workspace\bootdemo\src\main\webapp" />
-      <recent name="E:\workspace\bootdemo\src\main\webapp\jsp" />
-      <recent name="E:\workspace\bootdemo\src\main\resources\mybatis" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.boot.bootdemo.util" />
-      <recent name="com.boot.bootdemo.dao" />
-      <recent name="com.boot.bootdemo.entity" />
-      <recent name="com.boot.bootdemo.controller" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\workspace\bootdemo\src\main\webapp\jsp" />
       <recent name="E:\workspace\bootdemo\src\main\resources\templates\jsp" />
@@ -101,9 +119,21 @@
       <recent name="E:\workspace\bootdemo\src\main\resources\mapper" />
       <recent name="E:\workspace\bootdemo\src\main\resources\templates" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.boot.bootdemo.util" />
+      <recent name="com.boot.bootdemo.dao" />
+      <recent name="com.boot.bootdemo.entity" />
+      <recent name="com.boot.bootdemo.controller" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\workspace\bootdemo\src\main\java\com\boot\bootdemo" />
+      <recent name="E:\workspace\bootdemo\src\main\webapp" />
+      <recent name="E:\workspace\bootdemo\src\main\webapp\jsp" />
+      <recent name="E:\workspace\bootdemo\src\main\resources\mybatis" />
+    </key>
   </component>
   <component name="RunManager" selected="Spring Boot.BootdemoApplication">
-    <configuration name="BootdemoApplicationTests.emailSend" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BootdemoApplicationTests.forindByAuthor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bootdemo" />
       <extension name="coverage">
         <pattern>
@@ -113,13 +143,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.boot.bootdemo" />
       <option name="MAIN_CLASS_NAME" value="com.boot.bootdemo.BootdemoApplicationTests" />
-      <option name="METHOD_NAME" value="emailSend" />
+      <option name="METHOD_NAME" value="forindByAuthor" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BootdemoApplicationTests.redisTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BootdemoApplicationTests.forindByAuthor1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bootdemo" />
       <extension name="coverage">
         <pattern>
@@ -129,7 +159,55 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.boot.bootdemo" />
       <option name="MAIN_CLASS_NAME" value="com.boot.bootdemo.BootdemoApplicationTests" />
-      <option name="METHOD_NAME" value="redisTest" />
+      <option name="METHOD_NAME" value="forindByAuthor1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BootdemoApplicationTests.search" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bootdemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.boot.bootdemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.boot.bootdemo" />
+      <option name="MAIN_CLASS_NAME" value="com.boot.bootdemo.BootdemoApplicationTests" />
+      <option name="METHOD_NAME" value="search" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BootdemoApplicationTests.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bootdemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.boot.bootdemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.boot.bootdemo" />
+      <option name="MAIN_CLASS_NAME" value="com.boot.bootdemo.BootdemoApplicationTests" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BootdemoApplicationTests.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bootdemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.boot.bootdemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.boot.bootdemo" />
+      <option name="MAIN_CLASS_NAME" value="com.boot.bootdemo.BootdemoApplicationTests" />
+      <option name="METHOD_NAME" value="test01" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -146,8 +224,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BootdemoApplicationTests.redisTest" />
-        <item itemvalue="JUnit.BootdemoApplicationTests.emailSend" />
+        <item itemvalue="JUnit.BootdemoApplicationTests.forindByAuthor1" />
+        <item itemvalue="JUnit.BootdemoApplicationTests.test01" />
+        <item itemvalue="JUnit.BootdemoApplicationTests.forindByAuthor" />
+        <item itemvalue="JUnit.BootdemoApplicationTests.search" />
+        <item itemvalue="JUnit.BootdemoApplicationTests.test" />
       </list>
     </recent_temporary>
   </component>
@@ -162,6 +243,7 @@
         </serviceView>
       </list>
     </option>
+    <option name="showServicesTree" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -185,6 +267,11 @@
       <workItem from="1594965103696" duration="4410000" />
       <workItem from="1595293867847" duration="11745000" />
       <workItem from="1595378176809" duration="12777000" />
+      <workItem from="1595471150590" duration="4414000" />
+      <workItem from="1595550863225" duration="11655000" />
+      <workItem from="1595574806446" duration="3200000" />
+      <workItem from="1595810873861" duration="20433000" />
+      <workItem from="1595896792919" duration="14488000" />
     </task>
     <task id="LOCAL-00001" summary="首次提交">
       <created>1594969049448</created>
@@ -235,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595323906889</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="研究Redis缓存 未成功">
+      <created>1595471197131</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1595471197131</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,7 +350,8 @@
     <MESSAGE value="首次提交" />
     <MESSAGE value="修改" />
     <MESSAGE value="研究Redis缓存" />
-    <option name="LAST_COMMIT_MESSAGE" value="研究Redis缓存" />
+    <MESSAGE value="研究Redis缓存 未成功" />
+    <option name="LAST_COMMIT_MESSAGE" value="研究Redis缓存 未成功" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="180" key="#Project_Structure" timestamp="1593414270273">
@@ -267,22 +362,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="178" width="1084" height="685" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595302971439" />
-    <state x="765" y="212" key="#com.intellij.ide.util.MemberChooser" timestamp="1595403929601">
+    <state x="765" y="212" key="#com.intellij.ide.util.MemberChooser" timestamp="1595917778900">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="212" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1595403929601" />
+    <state x="765" y="212" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1595917778900" />
     <state x="689" y="307" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1591772592369">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="689" y="307" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591772592369" />
-    <state x="418" y="115" key="CommitChangelistDialog2" timestamp="1595323906234">
+    <state x="418" y="115" key="CommitChangelistDialog2" timestamp="1595471202097">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="418" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1595323906234" />
-    <state width="456" height="466" key="DebuggerActiveHint" timestamp="1595404889818">
+    <state x="418" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1595471202097" />
+    <state width="469" height="466" key="DebuggerActiveHint" timestamp="1595924850197">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="456" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1595404889818" />
+    <state width="469" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1595924850197" />
     <state x="184" y="85" key="DiffContextDialog" timestamp="1595235452117">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -299,78 +394,86 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="584" y="226" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594969051033" />
-    <state width="1876" height="221" key="GridCell.Tab.0.bottom" timestamp="1595410683472">
+    <state width="1876" height="322" key="GridCell.Tab.0.bottom" timestamp="1595927283031">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="221" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595410683472" />
-    <state width="1876" height="221" key="GridCell.Tab.0.center" timestamp="1595410683472">
+    <state width="1876" height="322" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595927283031" />
+    <state width="1876" height="322" key="GridCell.Tab.0.center" timestamp="1595927283031">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="221" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595410683472" />
-    <state width="1876" height="221" key="GridCell.Tab.0.left" timestamp="1595410683472">
+    <state width="1876" height="322" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595927283031" />
+    <state width="1876" height="322" key="GridCell.Tab.0.left" timestamp="1595927283031">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="221" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595410683472" />
-    <state width="1876" height="221" key="GridCell.Tab.0.right" timestamp="1595410683472">
+    <state width="1876" height="322" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595927283031" />
+    <state width="1876" height="322" key="GridCell.Tab.0.right" timestamp="1595927283031">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="221" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595410683472" />
-    <state width="1876" height="221" key="GridCell.Tab.1.bottom" timestamp="1595410683472">
+    <state width="1876" height="322" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595927283031" />
+    <state width="1876" height="322" key="GridCell.Tab.1.bottom" timestamp="1595927282901">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="221" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595410683472" />
-    <state width="1876" height="221" key="GridCell.Tab.1.center" timestamp="1595410683472">
+    <state width="1876" height="322" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595927282901" />
+    <state width="1876" height="322" key="GridCell.Tab.1.center" timestamp="1595927282901">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="221" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595410683472" />
-    <state width="1876" height="221" key="GridCell.Tab.1.left" timestamp="1595410683472">
+    <state width="1876" height="322" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595927282901" />
+    <state width="1876" height="322" key="GridCell.Tab.1.left" timestamp="1595927282901">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="221" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595410683472" />
-    <state width="1876" height="221" key="GridCell.Tab.1.right" timestamp="1595410683472">
+    <state width="1876" height="322" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595927282901" />
+    <state width="1876" height="322" key="GridCell.Tab.1.right" timestamp="1595927282901">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="221" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595410683472" />
-    <state width="1876" height="221" key="GridCell.Tab.2.bottom" timestamp="1595410683472">
+    <state width="1876" height="322" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595927282901" />
+    <state width="1876" height="322" key="GridCell.Tab.2.bottom" timestamp="1595927282901">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="221" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595410683472" />
-    <state width="1876" height="221" key="GridCell.Tab.2.center" timestamp="1595410683472">
+    <state width="1876" height="322" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595927282901" />
+    <state width="1876" height="322" key="GridCell.Tab.2.center" timestamp="1595927282901">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="221" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595410683472" />
-    <state width="1876" height="221" key="GridCell.Tab.2.left" timestamp="1595410683472">
+    <state width="1876" height="322" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595927282901" />
+    <state width="1876" height="322" key="GridCell.Tab.2.left" timestamp="1595927282901">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="221" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595410683472" />
-    <state width="1876" height="221" key="GridCell.Tab.2.right" timestamp="1595410683472">
+    <state width="1876" height="322" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595927282901" />
+    <state width="1876" height="322" key="GridCell.Tab.2.right" timestamp="1595927282901">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="221" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595410683472" />
-    <state x="490" y="177" key="Maven.ArtifactSearchDialog" timestamp="1591694929545">
+    <state width="1876" height="322" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595927282901" />
+    <state x="490" y="177" key="Maven.ArtifactSearchDialog" timestamp="1595481505344">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="490" y="177" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591694929545" />
-    <state x="440" y="96" key="SettingsEditor" timestamp="1595313799022">
+    <state x="490" y="177" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595481505344" />
+    <state x="440" y="96" key="SettingsEditor" timestamp="1595924093961">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="96" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1595313799022" />
-    <state x="552" y="255" key="Vcs.Push.Dialog.v2" timestamp="1595323917458">
+    <state x="440" y="96" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1595924093961" />
+    <state x="552" y="255" key="Vcs.Push.Dialog.v2" timestamp="1595471208900">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="255" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1595323917458" />
-    <state x="570" y="241" width="779" height="558" key="find.popup" timestamp="1591867749468">
+    <state x="552" y="255" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1595471208900" />
+    <state width="968" height="762" key="XDebugger.FullValuePopup" timestamp="1595924850195">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="570" y="241" width="779" height="558" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591867749468" />
+    <state width="968" height="762" key="XDebugger.FullValuePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1595924850195" />
+    <state x="570" y="241" width="779" height="558" key="find.popup" timestamp="1595841195113">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="570" y="241" width="779" height="558" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1595841195113" />
     <state x="330" y="245" width="1259" height="663" key="new project wizard" timestamp="1591782633580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="330" y="245" width="1259" height="663" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1591782633580" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1594369074089">
+    <state x="699" y="341" width="731" height="311" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1595924092146">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1594369074089" />
+    <state x="699" y="341" width="731" height="311" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595924092146" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1595831485387">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1595831485387" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -381,28 +484,8 @@
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/boot/bootdemo/controller/PaperController.java</url>
-          <line>66</line>
-          <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/boot/bootdemo/controller/PaperController.java</url>
-          <line>67</line>
-          <option name="timeStamp" value="54" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/boot/bootdemo/service/PaperServiceImpl.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="56" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/boot/bootdemo/controller/PaperController.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="58" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/boot/bootdemo/util/RedisUtil1.java</url>
-          <line>29</line>
+          <line>34</line>
           <option name="timeStamp" value="63" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -454,6 +537,56 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/boot/bootdemo/controller/PaperController.java</url>
           <line>60</line>
           <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/boot/bootdemo/BootdemoApplicationTests.java</url>
+          <line>165</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/boot/bootdemo/BootdemoApplicationTests.java</url>
+          <line>170</line>
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/boot/bootdemo/BootdemoApplicationTests.java</url>
+          <line>171</line>
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/boot/bootdemo/BootdemoApplicationTests.java</url>
+          <line>172</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/boot/bootdemo/BootdemoApplicationTests.java</url>
+          <line>174</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/boot/bootdemo/BootdemoApplicationTests.java</url>
+          <line>176</line>
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/boot/bootdemo/BootdemoApplicationTests.java</url>
+          <line>175</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/boot/bootdemo/BootdemoApplicationTests.java</url>
+          <line>177</line>
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/boot/bootdemo/BootdemoApplicationTests.java</url>
+          <line>197</line>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/boot/bootdemo/BootdemoApplicationTests.java</url>
+          <line>198</line>
+          <option name="timeStamp" value="89" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

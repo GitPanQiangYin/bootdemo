@@ -1,3 +1,4 @@
+/*
 package com.boot.bootdemo.service;
 
 import com.alibaba.fastjson.JSON;
@@ -5,10 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
+*/
 /**
  * @author Administrator
  * @date 2020/7/21 11:24
- */
+ *//*
+
 @Service
 public class RedisTemplateService {
 
@@ -61,13 +64,15 @@ public class RedisTemplateService {
         }
     }
 
-    /*
+    */
+/*
     * @description：
     * @param value：T values  T 任意类型
     * @return {{@link java.lang.String}}
     * @author Administrator
     * @date 2020/7/21 11:25
-    */
+    *//*
+
     private <T> String beanToString(T value) {
 
         if(value==null){
@@ -88,3 +93,4 @@ public class RedisTemplateService {
     }
 
 }
+*/

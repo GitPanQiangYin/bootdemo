@@ -42,6 +42,7 @@
         </div>
     </div>
     <form action="" name="userForm">
+        论文编号：<input type="text" name="code"><br><br><br>
         论文名称：<input type="text" name="paperName"><br><br><br>
         论文数量：<input type="text" name="paperNum"><br><br><br>
         论文详情：<input type="text" name="paperDetail"><br><br><br>
